@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --loader ts-node/esm src/server.ts",
+    "dev": "nodemon src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,10 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
     "express": "^5.1.0"
+  },
+  "ts-node": {
+    "esm": true
   }
 }
