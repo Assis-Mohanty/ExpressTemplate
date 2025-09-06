@@ -1,8 +1,9 @@
 import express, { Request, Response } from 'express'
 
-const pingHandler = (req:Request,res:Response)=>{
-    console.log('pong');
-    res.send('pong')
+export const pingHandler = async (req:Request,res:Response):Promise<void>=>{
+    res.status(200).json({
+        message:"pong",
+        success:true
+    })
 }
-
-export default pingHandler;
+ 
